@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--     <link rel="stylesheet" href="common/common.css">-->
+    <script src="common/rem.js"></script>
+    <!--<script src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>-->
+    <title>To the most beloved Yjx</title>
+    <link rel="icon" href="images/xin.png" type="image/x-icon"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body, .yjx {
+            height: 100%;
+        }
+
+        .yjx {
+            max-width: 780px;
+            margin: 0 auto;
+            position: relative;
+            background: url("images/1.jpeg") no-repeat;
+            background-size: 100% 100%;
+        }
+
+        ul {
+            width: 2.5rem;
+            height: 2.5rem;
+            transform-style: preserve-3d;
+            animation: sport 8s linear 0s infinite normal;
+            margin: auto;
+            position: absolute;
+            left: 0;
+            bottom: 35%;
+            right: 0;
+        }
+
+        ul li {
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: black;
+        }
+
+        ul li:nth-child(1) {
+            transform: rotateY(45deg) translateZ(2.5rem);
+        }
+
+        ul li:nth-child(2) {
+            transform: rotateY(90deg) translateZ(2.5rem);
+        }
+
+        ul li:nth-child(3) {
+            transform: rotateY(135deg) translateZ(2.5rem);
+        }
+
+        ul li:nth-child(4) {
+            transform: rotateY(180deg) translateZ(2.5rem);
+        }
+
+        ul li:nth-child(5) {
+            transform: rotateY(225deg) translateZ(2.5rem);
+        }
+
+        ul li:nth-child(6) {
+            transform: rotateY(270deg) translateZ(2.5rem);
+        }
+
+        ul li:nth-child(7) {
+            transform: rotateY(315deg) translateZ(2.5rem);
+        }
+
+        ul li:nth-child(8) {
+            transform: rotateY(360deg) translateZ(2.5rem);
+        }
+
+        ul li img {
+            width: 100%;
+            height: 100%;
+            border: .05rem solid #ea68a2;
+            box-sizing: border-box;
+        }
+
+        ul:hover {
+            animation-play-state: paused;
+        }
+
+        ul:hover li img {
+            opacity: 0.5;
+        }
+
+        ul li:hover img {
+            opacity: 1;
+        }
+
+        @keyframes sport {
+            0% {
+                /*
+                注意点:
+                1.动画中如果有和默认样式中同名的属性, 会覆盖默认样式中同名的属性
+                2.在编写动画的时候, 固定不变的值写在前面, 需要变化的值写在后面
+                */
+                transform: rotateX(-10deg) rotateY(0deg) rotateZ(5deg);
+            }
+            50% {
+                transform: rotateX(-10deg) rotateY(180deg) rotateZ(14deg);
+            }
+            100% {
+                transform: rotateX(-10deg) rotateY(360deg) rotateZ(5deg);
+            }
+        }
+
+        .heartBox {
+            position: absolute;
+            left: 1rem;
+            bottom: 1rem;
+            animation: move 14s linear 0s infinite normal;
+        }
+
+        .heartBox > span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            font-size: .33rem;
+            text-align: center;
+            line-height: 1.5rem;
+            color: #ea68a2;
+        }
+
+        .heart {
+            width: 1.73rem;
+            height: 1.57rem;
+        }
+
+        @keyframes move {
+            0% {
+                left: 2%;
+                bottom: 2%;
+                opacity: 1;
+            }
+            20% {
+                left: 40%;
+                bottom: 20%;
+                opacity: 0.3;
+            }
+            40% {
+                left: 80%;
+                bottom: 45%;
+                opacity: 1;
+            }
+            60% {
+                left: 40%;
+                bottom: 80%;
+                opacity: 0.3;
+            }
+            80% {
+                left: 4%;
+                bottom: 30%;
+                opacity: 1;
+            }
+            100% {
+                left: 50%;
+                bottom: 2%;
+                opacity: 0.3;
+            }
+        }
+        .xld{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            color: #ea68a2;
+            font-size: .40rem;
+            display: inline-block;
+            padding: 10px;
+            background-color: white;
+            opacity:.4;
+        }
+       .xlds{
+           color: red;
+       }
+    </style>
+</head>
+<body>
+<audio src="images/芬芳一生.mp3" autoplay="autoplay" loop="loop"></audio>
+<div class="yjx">
+    <ul>
+        <li><img src="images/1.jpeg" alt=""></li>
+        <li><img src="images/2.jpeg" alt=""></li>
+        <li><img src="images/3.jpeg" alt=""></li>
+        <li><img src="images/41.jpeg" alt=""></li>
+        <li><img src="images/5.jpeg" alt=""></li>
+        <li><img src="images/6.jpeg" alt=""></li>
+        <li><img src="images/7.jpeg" alt=""></li>
+        <li><img src="images/8.jpeg" alt=""></li>
+    </ul>
+    <div class="heartBox">
+        <img src="images/xin.png" class="heart">
+        <span>我喜欢你</span>
+    </div>
+    <p class="xld">
+        与你相恋第
+    <span class="xlds"></span>
+        天
+    </p>
+</div>
+<script>
+    var imgBox = document.getElementsByClassName('yjx')[0];
+    var xldBoxs = document.getElementsByClassName('xlds')[0];
+    var index = 1;
+    setInterval(function () {
+        if (index > 8) {
+            index = 1;
+        }
+        if (index === 4) {
+            index = 5;
+        }
+        imgBox.style.backgroundImage = "url(images/" + index + ".jpeg)";
+        index += 1;
+    }, 3000)
+// 计算两个时间相距多少天
+    function getTime2Time($time1, $time2)
+    {var time1 = arguments[0], time2 = arguments[1];
+        time1 = Date.parse(time1)/1000;
+        time2 = Date.parse(time2)/1000;
+        var time_ = time1 - time2;
+        var days=time_/(3600*24);
+        return (Math.floor(days));
+    }
+    xldBoxs.innerText=getTime2Time(new Date(), '2017-12-30');
+</script>
+</body>
+</html>
